@@ -18,7 +18,6 @@ var app = new Vue({
           this.visible=true;
         }
       })
-      
       .catch((error)=>{
         console.log(error)
         this.isError=true
