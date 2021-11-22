@@ -12,10 +12,11 @@
 
 <div class="" id="app">
   <h1 v-if="isError">errore</h1>
-  <ul  v-else  v-for="mail in mails">
+  <ul 
+   v-else-if="visible" 
+   v-for="mail in mails">
     <li >{{mail}}</li>
   </ul>
-  
 </div>
 
 

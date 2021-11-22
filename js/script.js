@@ -2,7 +2,8 @@ var app = new Vue({
   el: '#app',
   data: {
     mails:[],
-    isError:false
+    isError:false,
+    visible:false,
   },
 
   mounted(){
@@ -13,7 +14,9 @@ var app = new Vue({
         const data= response.data;
         console.log(data);
         this.mails.push(data.response) ;
-         
+        if(this.mails.length===10){
+          this.visible=true;
+        }
       })
       
       .catch((error)=>{
